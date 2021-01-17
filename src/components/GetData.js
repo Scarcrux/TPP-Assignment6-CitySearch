@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import GetMoreData from "./GetMoreData";
 
 function GetData(props) {
   const [error, setError] = useState(null);
@@ -35,24 +34,7 @@ function GetData(props) {
         })
   }, [])
 
-  // useEffect(() => {
-  //   items.map(function(item, index){
-  //   let url = 'http://ctp-zip-api.herokuapp.com/zip/' + item
-  //   fetch(url)
-  //     .then(res => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIsLoaded(true);
-  //         setStates(prevArray => [...prevArray, result])
 
-  //       },
-  //       (error) => {
-  //         setIsLoaded(true);
-  //         setError(error);
-  //       }
-  //     )
-  // })
-  // }, [])
  
 
 
@@ -62,14 +44,7 @@ function GetData(props) {
 
 
   function ZipList(items) {
-    // console.log(states)
-    // states.map((arrays, index) => {
-      
-    //    arrays.map((records) =>{
-    //     <li key={index}>{records.Zipcode}, {records.City}, {records.State}</li>
-    //     console.log(records.City)
-    //   })
-    // });
+
     const listItems = states.map((item, index) =>
       <li key={index}>
         {item[0].Zipcode}, {item[0].City}, {item[0].State}
